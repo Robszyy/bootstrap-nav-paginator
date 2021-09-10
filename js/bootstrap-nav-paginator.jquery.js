@@ -1,12 +1,12 @@
 /*!
- * Bootstrap Nav Paginator 1.0.0
+ * Bootstrap Nav Paginator 1.0.1
  * Author: Robin Prugne
  */
 
 /**
  * @summary     Bootstrap Nav Paginator
  * @description Pagination module for Bootstrap's nav component
- * @version     1.0.0
+ * @version     1.0.1
  * @file        bootstrap-nav-paginator.jquery.js
  * @author      Robin Prugne
  *
@@ -21,16 +21,7 @@ $(document).ready(function() {
         initialize(e,i);
         add_buttons(i);
         update_view(i);
-
-        $(selectors[i]['next']).on("click", function(){
-            pages_index[i]++;
-            update_view(i);
-        });
-
-        $(selectors[i]['prev']).on("click", function(){
-            pages_index[i]--;
-            update_view(i);
-        });
+        events(i);
     });
 });
 
@@ -99,9 +90,27 @@ function update_view(i){
     array_b.length <= n_items_per_pages[i] * pages_index[i] ? $(selectors[i]['next']).addClass("disabled") : $(selectors[i]['next']).removeClass("disabled");
 }
 
+function events(i){
+    $(selectors[i]['next']).on("click", function(){
+        pages_index[i]++;
+        update_view(i);
+    });
+
+    $(selectors[i]['prev']).on("click", function(){
+        pages_index[i]--;
+        update_view(i);
+    });
+}
+
 //prototype function
 $.fn.BsNavPaginator = function(item_count, buttons_class = "") {
-    this.addClass('nav-paginator');
+    let i = navs.length;
+
     this.attr('data-paginator-item-count',item_count);
     this.attr('data-paginator-buttons-class',buttons_class);
+
+    initialize(this,i);
+    add_buttons(i);
+    update_view(i);
+    events(i);
 }

@@ -7,7 +7,7 @@ Extra light plug-in for Bootstrap's nav component. Made to improve users experie
  - Bootstrap 3.3 or higher
 
 # Installation
-You can download the plug-in [here](https://github.com/Robszyy/bootstrap-nav-paginator/releases/tag/1.0.0), or include the file from the [CDN](https://cdn.jsdelivr.net/gh/Robszyy/bootstrap-nav-paginator@1.0.0/js/).
+You can download the plug-in [here](https://github.com/Robszyy/bootstrap-nav-paginator/releases/tag/1.0.1), or include the file from the [CDN](https://cdn.jsdelivr.net/gh/Robszyy/bootstrap-nav-paginator@1.0.1/js/).
 
 *Which file to include ?*
 > Bootstrap ☞ bootstrap-nav-paginator.js or bootstrap-nav-paginator.min.js
@@ -46,7 +46,7 @@ Be sure to also specify the number of items per page ``data-paginator-item-count
 ```
 
 # Examples
-You can check for examples [here](https://github.com/Robszyy/bootstrap-nav-paginator/tree/1.0.0/examples).
+You can check for examples [here](https://github.com/Robszyy/bootstrap-nav-paginator/tree/1.0.1/examples).
 
 # Licence
 Bootstrap Nav Paginator is released under the MIT license. You are free to use, modify and distribute this software, as long as the copyright header is left intact (specifically the comment block which starts with /*!).
