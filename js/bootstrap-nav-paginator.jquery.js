@@ -1,12 +1,12 @@
 /*!
- * Bootstrap Nav Paginator 1.0.1
+ * Bootstrap Nav Paginator 1.0.2
  * Author: Robin Prugne
  */
 
 /**
  * @summary     Bootstrap Nav Paginator
  * @description Pagination module for Bootstrap's nav component
- * @version     1.0.1
+ * @version     1.0.2
  * @file        bootstrap-nav-paginator.jquery.js
  * @author      Robin Prugne
  *
@@ -26,12 +26,12 @@ $(document).ready(function() {
 });
 
 function initialize(e,i){
-    pages_index[i] = 1;
     navs[i] = e;
 
     if($(navs[i]).attr('data-paginator-item-count') !== undefined){
         if($(navs[i]).attr('data-paginator-item-count') > 0){
             n_items_per_pages[i] = $(navs[i]).attr('data-paginator-item-count');
+            pages_index[i] = get_page_from_item(i, e.get(0).tagName.toLowerCase() === "ul" ? e.find('.active').parent() : e.find('.active'));
         }else{
             throw "Bootstrap Nav Paginator Error: attribute 'item count' must be a positive number.";
         }
@@ -100,6 +100,12 @@ function events(i){
         pages_index[i]--;
         update_view(i);
     });
+}
+
+function get_page_from_item(i, item){
+    let all_items = navs[i].children();
+    let item_index = all_items.index(item);
+    return parseInt(item_index/n_items_per_pages[i])+1;
 }
 
 //prototype function
