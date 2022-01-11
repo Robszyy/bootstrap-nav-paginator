@@ -1,6 +1,5 @@
 # Bootstrap Nav Paginator
 [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
-[![](https://data.jsdelivr.com/v1/package/gh/Robszyy/bootstrap-nav-paginator/badge)](https://www.jsdelivr.com/package/gh/Robszyy/bootstrap-nav-paginator)
 [![GitHub license](https://img.shields.io/github/license/Robszyy/bootstrap-nav-paginator)](https://github.com/Robszyy/bootstrap-nav-paginator/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/Robszyy/bootstrap-nav-paginator)](https://github.com/Robszyy/bootstrap-nav-paginator/releases/)
 
